@@ -49,11 +49,11 @@ Por ejemplo si el lexer provee el stream de tokens de la tabla anterior, el
 								  / \
 								 /   \
 								/     \
-							   /       \
-							  (+)      (/)
-							  / \      / \ 
-							(1) (2)  (*)  5
-									 / \
+							       /       \
+							      (+)      (/)
+							      / \      / \ 
+							    (1) (2)  (*)  5
+								     / \
 								   (3) (4)
 
 ## Intérprete
