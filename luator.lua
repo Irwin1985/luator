@@ -10,7 +10,7 @@ local TokenType = {
 	lparen  = 'LPAREN',
 	rparen  = 'RPAREN',
 	illegal = 'ILLEGAL',
-    eof     = 'EOF'
+	eof     = 'EOF'
 }
 
 local Token = {
@@ -200,15 +200,16 @@ end
 function Parser:factor()
 	if self.curToken.type == TokenType.plus or self.curToken.type == TokenType.minus then
 		local token = self.curToken
-		self:eat(TokenType.number)
+		self:eat(token.type)
 		return {
-			type = 'Unary',
-			right = self:factor()
+			type 	= 'Unary',
+			op 		= token,
+			right 	= self:factor()
 		}
 	elseif self.curToken.type == TokenType.lparen then
 		self:eat(TokenType.lparen)
 		local node = self:expression()
-		self:eat(TokenType.lparen)
+		self:eat(TokenType.rparen)
 		return node
 	else -- number
 		local node = {
