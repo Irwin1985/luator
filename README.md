@@ -1,7 +1,6 @@
 # Luator
 
-## Es una pequeña calculadora que hice para aprender el lenguaje de
-programación [Lua](https://www.lua.org/).
+## Es una pequeña calculadora que hice para aprender el lenguaje de programación [Lua](https://www.lua.org/).
 
 
 Al decir **Calculadora** se tiende a pensar en un ejercicio muy simple pero
